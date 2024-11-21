@@ -1,0 +1,24 @@
+using System;
+
+
+class Program { 
+    static void Main()
+    {
+        string input = "testando";
+        string result = Kata.Disemvowel(input);
+        Console.WriteLine(result);
+    }
+
+}
+public static class Kata
+{
+    public static string Disemvowel(string str)
+    {
+        string output = str.Replace("a", "").Replace("A", "");
+   
+        return output;
+    }
+
+    
+
+}
