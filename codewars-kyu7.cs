@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 
 class Program { 
@@ -14,8 +15,10 @@ public static class Kata
 {
     public static string Disemvowel(string str)
     {
-        string output = str.Replace("a", "").Replace("A", "");
-   
+        string vowels = "aeiouAEIOU";
+
+        string output = new string(str.Where(c => !vowels.Contains(c)).ToArray());
+
         return output;
     }
 
